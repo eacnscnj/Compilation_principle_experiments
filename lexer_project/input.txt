@@ -1,0 +1,8 @@
+void main()
+{
+    int i=1;
+    int j = @;
+    if(i+j>=9){}
+    else{print("beter than 9")};
+    while;/* test */
+}
