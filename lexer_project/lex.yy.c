@@ -2005,14 +2005,13 @@ int main(int argc, char **argv) {
     yyout = fopen("output.txt", "w");
     if (!yyout) {
         perror("Error opening output file");
-        fclose(yyin); // 关闭输入文件
+        fclose(yyin);
         return 1;
     }
 
     // 开始词法分析
     yylex();
 
-    // 关闭文件
     fclose(yyin);
     fclose(yyout);
 

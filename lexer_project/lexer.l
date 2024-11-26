@@ -79,9 +79,9 @@ COMMENT "/*"([^*]|\*+[^*/])*\*+"/"
 {NUM}        	{ print_token("NUM", yytext); }
 {ID}        	{ 
                 	if (is_keyword(yytext)) {
-                	fprintf(yyout,"KEYWORD: %s\n", yytext); // 输出保留字
+                	fprintf(yyout,"KEYWORD %s\n", yytext); // 输出保留字
                 	} else {
-                	fprintf(yyout,"ID: %s\n", yytext); // 输出标识符
+                	fprintf(yyout,"ID %s\n", yytext); // 输出标识符
                 }; 
             	}
 
